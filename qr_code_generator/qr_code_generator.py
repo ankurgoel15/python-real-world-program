@@ -15,7 +15,7 @@ def generate_qr():
 
     img = qr.make_image(file_color="black", back_color="white")
     qr.make(fit=True)
-
+    img.save(file_name)
     image_open = PIL.Image.open(file_name)
     image = ImageTk.PhotoImage(image_open)
 
